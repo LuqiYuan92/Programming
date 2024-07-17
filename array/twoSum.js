@@ -29,7 +29,7 @@ var twoSum2 = (nums, target) => {
   let map = new Map();
   for (var i = 0; i < nums.length; i++) {
     let difference = target - nums[i];
-    console.log(map, difference);
+    console.log("sum2", map, difference);
     if (map.has(difference)) {
       return [i, map.get(difference)];
     }
@@ -51,7 +51,7 @@ var twoSum3 = (nums, target) => {
 
   for (let i = 0; i < nums.length; i++) {
     complement = target - nums[i];
-    console.log(map, complement);
+    console.log("sum3", map, complement);
     if (map.has(nums[i])) {
       return [i, map.get(nums[i])];
     }
@@ -59,5 +59,23 @@ var twoSum3 = (nums, target) => {
   }
 };
 
-console.log(twoSum3(nums2, target2));
+// console.log(twoSum3(nums2, target2));
+
+function twoSum4(nums, target) {
+  let hash = {};
+  for (let i = 0; i < nums.length; i++) {
+    hash[nums[i]] = i;
+  }
+  console.log("hash", hash);
+  for (let i = 0; i < nums.length; i++) {
+    dif = target - nums[i];
+    if (hash[dif] && hash[dif] !== i) {
+      return [i, hash[dif]];
+    }
+  }
+}
+
 console.log(twoSum3(nums1, target1));
+console.log(twoSum2(nums1, target1));
+// console.log(twoSum4(nums2, target2));
+console.log(twoSum4(nums1, target1));

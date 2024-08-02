@@ -1,5 +1,17 @@
 // Given an integer array nums, find the subarray with the largest sum, and return its sum.
 //53. Maximum Subarray
+
+var maxSubArray0 = function (nums) {
+  let curSum = 0;
+  let allSum = Number.NEGATIVE_INFINITY;
+  for (let item of nums) {
+    //if cursum >0, then include previous Sum; curSum<0 then exclude previsou Sum;
+    curSum = Math.max(curSum + item, item);
+    allSum = Math.max(curSum, allSum);
+  }
+  return allSum;
+};
+
 var maxSubArray = function (nums) {
   let curSum = 0,
     maxSum = 0;

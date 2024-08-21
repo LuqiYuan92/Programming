@@ -1,15 +1,12 @@
 {
-  "name": "dynamicp",
+  "name": "string",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "58lengthLast.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mathjs": "^13.0.3"
-  }
+  "license": "ISC"
 }

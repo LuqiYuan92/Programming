@@ -14,6 +14,7 @@ function mergeSort(array) {
   console.log("sortedRight", sortedRight);
   //   console.log("mergedcheck", merge(left, right));  incorrect
   return merge(sortedLeft, sortedRight);
+  //alternative approach
   return merge(mergeSort(left), mergeSort(right)); //merge the divided one last element (divide and conquer)
 }
 

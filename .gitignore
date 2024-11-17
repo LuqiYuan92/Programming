@@ -10,3 +10,7 @@ profile.xlsx
 research topic wordcloud.py
 
 # using asteroid *.txt to indicate all the files ending with txt
+
+lucy_virtual_env
+
+*.xlsx
